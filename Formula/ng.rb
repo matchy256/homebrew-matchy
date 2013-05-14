@@ -7,9 +7,9 @@ class Ng < Formula
   version '1.5beta1'
 
   def patches
-    [ 'https://github.com/matchy2/homebrew-matchy/raw/master/Resources/ng/ng-1.5beta1-utf8.patch.gz',
-      'https://github.com/matchy2/homebrew-matchy/raw/master/Resources/ng/ng-1.4.3-mkstemp.patch',
-      'https://github.com/matchy2/homebrew-matchy/raw/master/Resources/ng/ng-1.4.4-glibc235.patch' ]
+    [ 'file:///usr/local/Library/Taps/matchy2-matchy/Resources/ng/ng-1.5beta1-utf8.patch.gz',
+      'file:///usr/local/Library/Taps/matchy2-matchy/Resources/ng/ng-1.4.3-mkstemp.patch',
+      'file:///usr/local/Library/Taps/matchy2-matchy/Resources/ng/ng-1.4.4-glibc235.patch' ]
   end
 
   def install
