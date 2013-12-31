@@ -9,7 +9,8 @@ class Ng < Formula
   def patches
     [ 'http://www002.upp.so-net.ne.jp/hidev/ng-1.5beta1-utf8.patch.gz',
       'file:///usr/local/Library/Taps/matchy2-matchy/Resources/ng/ng-1.4.3-mkstemp.patch',
-      'file:///usr/local/Library/Taps/matchy2-matchy/Resources/ng/ng-1.4.4-glibc235.patch' ]
+      'file:///usr/local/Library/Taps/matchy2-matchy/Resources/ng/ng-1.4.4-glibc235.patch',
+      'file:///usr/local/Library/Taps/matchy2-matchy/Resources/ng/ng-1.5beta1-gcc421.patch' ]
   end
 
   def install
