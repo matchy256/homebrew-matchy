@@ -3,7 +3,8 @@ require 'formula'
 class Ng < Formula
   url 'http://tt.sakura.ne.jp/~amura/archives/ng/ng-1.5beta1.tar.gz'
   homepage 'http://tt.sakura.ne.jp/~amura/ng/'
-  md5 '70aa4906154e7884fb1305e90bdac887'
+  sha1 'c487bce740b3a1847a35fb29b5c6700c46f639b8'
+  sha1 '1c812a4994bde77f908a1b08cd68eb3ba120515a'
   version '1.5beta1'
 
   def patches
