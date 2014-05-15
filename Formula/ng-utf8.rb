@@ -1,6 +1,6 @@
 require 'formula'
 
-class Ng-utf8 < Formula
+class Ng < Formula
   url 'http://tt.sakura.ne.jp/~amura/archives/ng/ng-1.5beta1.tar.gz'
   homepage 'http://tt.sakura.ne.jp/~amura/ng/'
   sha1 '1c812a4994bde77f908a1b08cd68eb3ba120515a'
