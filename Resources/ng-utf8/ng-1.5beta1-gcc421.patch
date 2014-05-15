@@ -1,0 +1,42 @@
+diff -ur ng-1.5beta1.orig/sys/default/tty.c ng-1.5beta1/sys/default/tty.c
+--- ng-1.5beta1.orig/sys/default/tty.c	2001-01-21 03:10:22.000000000 +0900
++++ ng-1.5beta1/sys/default/tty.c	2013-12-31 17:54:25.000000000 +0900
+@@ -281,7 +281,7 @@
+ 	if (row == bot) {		/* Case of one line insert is	*/
+ 		ttmove(row, 0);		/*	special			*/
+ 		tteeol();
+-		return;
++		return 0;
+ 	}
+ 	if (CS && SR) {		/* Use scroll region and back index	*/
+ 		nl = bot - row;
+@@ -289,7 +289,7 @@
+ 		ttmove(row, 0);
+ 		while (nchunk--) putpad(SR, nl);
+ 		ttnowindow();
+-		return;
++		return 0;
+ 	} else if (insdel) {
+ 		ttmove(1+bot-nchunk, 0);
+ 		nl = nrow - ttrow;
+@@ -321,7 +321,7 @@
+ 	if (row == bot) {		/* One line special case	*/
+ 		ttmove(row, 0);
+ 		tteeol();
+-		return;
++		return 0;
+ 	}
+ 	if (CS) {			/* scrolling region	*/
+ 		nl = bot - row;
+diff -ur ng-1.5beta1.orig/sys/default/ttydef.h ng-1.5beta1/sys/default/ttydef.h
+--- ng-1.5beta1.orig/sys/default/ttydef.h	2001-02-14 18:19:45.000000000 +0900
++++ ng-1.5beta1/sys/default/ttydef.h	2013-12-31 17:53:51.000000000 +0900
+@@ -37,7 +37,7 @@
+ #define NCOL	132			/* (default) Columns.		*/
+ #endif	/* MSDOS or HUMAN68K */
+ #endif	/* NROW && NCOL */
+-/* #define	MOVE_STANDOUT		/* don't move in standout mode	*/
++// #define	MOVE_STANDOUT		/* don't move in standout mode	*/
+ #define STANDOUT_GLITCH			/* possible standout glitch	*/
+ #define TERMCAP				/* for possible use in ttyio.c	*/
+ 
