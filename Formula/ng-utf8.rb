@@ -1,5 +1,3 @@
-require 'formula'
-require 'fileutils'
 require 'etc'
 
 class NgUtf8 < Formula
@@ -38,8 +36,7 @@ class NgUtf8 < Formula
     homerc = %Q(#{Etc.getpwuid.dir}/.ng)
     tmprc  = %Q(#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/dot.ng)
     unless (File.exists?(homerc)) then
-      FileUtils.cp(tmprc, homerc)
-      puts "copy #{tmprc} to #{homerc}"
+      cp tmprc, homerc
     end
   end
 end
