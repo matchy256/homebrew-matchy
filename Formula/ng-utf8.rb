@@ -3,8 +3,9 @@ require 'fileutils'
 require 'etc'
 
 class NgUtf8 < Formula
-  url 'http://tt.sakura.ne.jp/~amura/archives/ng/ng-1.5beta1.tar.gz'
+  desc 'Ng (Micro Nemacs). Applied UTF-8 patch. see http://hidev.blog.so-net.ne.jp/2007-03-09'
   homepage 'http://tt.sakura.ne.jp/~amura/ng/'
+  url 'http://tt.sakura.ne.jp/~amura/archives/ng/ng-1.5beta1.tar.gz'
   sha256 '990b2ed34f2943da71af6771c0ac9a62c36857d6e6e6ad6e7dc8782860388d3c'
   version '1.5beta1'
 
