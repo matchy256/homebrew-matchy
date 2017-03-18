@@ -8,9 +8,9 @@ class NgUtf8 < Formula
 
   def patches
     [ %Q(http://www002.upp.so-net.ne.jp/hidev/ng-1.5beta1-utf8.patch.gz),
-      %Q(file://#{ENV['HOMEBREW_PREFIX']}/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/ng-1.4.3-mkstemp.patch),
-      %Q(file://#{ENV['HOMEBREW_PREFIX']}/Library/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/ng-1.4.4-glibc235.patch),
-      %Q(file://#{ENV['HOMEBREW_PREFIX']}/Library/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/ng-1.5beta1-gcc421.patch) ]
+      %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/ng-1.4.3-mkstemp.patch),
+      %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Library/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/ng-1.4.4-glibc235.patch),
+      %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Library/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/ng-1.5beta1-gcc421.patch) ]
   end
 
   def install
