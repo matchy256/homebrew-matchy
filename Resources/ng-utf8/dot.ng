@@ -1,0 +1,22 @@
+; ~/.ng
+;
+; for more detail, please read Ng.doc
+;
+
+; 'next-line' doesn't insert newline at the end of buffer.
+(next-line-add-newlines nil)
+
+; exchange C-h with DEL.
+(bsmap-mode)
+
+; don't make backup files.
+(make-backup-files nil)
+
+; blink matching parens
+(global-set-key ")" 'blink-matching-paren-hack)
+(global-set-key "}" 'blink-matching-paren-hack)
+(global-set-key "]" 'blink-matching-paren-hack)
+
+; regexp search by typing ESC C-s/C-r
+(global-set-key "\^[\^s" 're-search-forward)
+(global-set-key "\^[\^r" 're-search-backward)

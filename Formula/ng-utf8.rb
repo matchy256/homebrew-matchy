@@ -1,4 +1,6 @@
 require 'formula'
+require 'fileutils'
+require 'etc'
 
 class NgUtf8 < Formula
   url 'http://tt.sakura.ne.jp/~amura/archives/ng/ng-1.5beta1.tar.gz'
@@ -22,5 +24,11 @@ class NgUtf8 < Formula
     mkdir_p "#{prefix}/bin"
     mkdir_p "#{prefix}/share"
     system "make install"
+    homerc = %Q(#{Etc.getpwuid.dir}/.ng)
+    tmprc  = %Q(#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/dot.ng)
+    unless (File.exists?(homerc)) then
+      FileUtils.cp(tmprc, homerc)
+      puts "copy #{tmprc} to #{homerc}"
+    end
   end
 end
