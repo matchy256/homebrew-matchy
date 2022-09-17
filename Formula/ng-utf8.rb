@@ -8,7 +8,7 @@ class NgUtf8 < Formula
   version '1.5beta1'
 
   patch do
-    url 'http://www002.upp.so-net.ne.jp/hidev/ng-1.5beta1-utf8.patch.gz'
+    url %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/ng-1.5beta1-utf8.patch.gz)
     sha256 '2d2f8a65ba83e090af52879d757b491ff5701ffcac4a003707b11e0a2dd05c82'
   end
   patch do
