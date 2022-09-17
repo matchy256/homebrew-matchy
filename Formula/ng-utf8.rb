@@ -8,19 +8,19 @@ class NgUtf8 < Formula
   version '1.5beta1'
 
   patch do
-    url %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/ng-1.5beta1-utf8.patch.gz)
+    url %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy256/homebrew-matchy/Resources/ng-utf8/ng-1.5beta1-utf8.patch.gz)
     sha256 '2d2f8a65ba83e090af52879d757b491ff5701ffcac4a003707b11e0a2dd05c82'
   end
   patch do
-    url %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/ng-1.4.3-mkstemp.patch)
+    url %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy256/homebrew-matchy/Resources/ng-utf8/ng-1.4.3-mkstemp.patch)
     sha256 '7425ce639d812f1a6746909dd3eb3bb8817c99c33fce42cbaa96c039ffe35778'
   end
   patch do
-    url %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/ng-1.4.4-glibc235.patch)
+    url %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy256/homebrew-matchy/Resources/ng-utf8/ng-1.4.4-glibc235.patch)
     sha256 'ef745482c7d2b568208a14c5f2fc8c9262f675fc2ce0d4a8e3d57c5cb60a8ee4'
   end
   patch do
-    url %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/ng-1.5beta1-gcc421.patch)
+    url %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy256/homebrew-matchy/Resources/ng-utf8/ng-1.5beta1-gcc421.patch)
     sha256 '35d177d629a2dc580e9be759957703b3748c8597f3cc6b70db0f6e2ca9d13ed3'
   end
 
@@ -34,7 +34,7 @@ class NgUtf8 < Formula
     mkdir_p "#{prefix}/share"
     system "make install"
     homerc = %Q(#{Etc.getpwuid.dir}/.ng)
-    tmprc  = %Q(#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy2/homebrew-matchy/Resources/ng-utf8/dot.ng)
+    tmprc  = %Q(#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy256/homebrew-matchy/Resources/ng-utf8/dot.ng)
     unless (File.exists?(homerc)) then
       cp tmprc, homerc
     end
