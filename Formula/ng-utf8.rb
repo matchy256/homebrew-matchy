@@ -9,7 +9,7 @@ class NgUtf8 < Formula
 
   patch do
     url %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy256/homebrew-matchy/Resources/ng-utf8/ng-1.5beta1-utf8.patch.gz)
-    sha256 '2d2f8a65ba83e090af52879d757b491ff5701ffcac4a003707b11e0a2dd05c82'
+    sha256 '536720cdeadd0d1ba36bff8c0f97deb574f248789464dbe3f6e280179e9faf76'
   end
   patch do
     url %Q(file://#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy256/homebrew-matchy/Resources/ng-utf8/ng-1.4.3-mkstemp.patch)
