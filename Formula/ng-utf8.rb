@@ -37,8 +37,9 @@ class NgUtf8 < Formula
     homerc = %Q(#{Etc.getpwuid.dir}/.ng)
     dstrc = %Q(#{prefix}/etc/skel/dot.ng)
     tmprc  = %Q(#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy256/homebrew-matchy/Resources/ng-utf8/dot.ng)
+    cp tmprc, dstrc
     unless (File.exists?(homerc)) then
-      cp tmprc, dstrc
+      puts "You should execute \"cp #{dstrc} #{homerc}\""
     end
   end
 end
