@@ -25,7 +25,7 @@ class NgUtf8 < Formula
   end
 
   def install
-    system "CC='gcc -Wreturn-type' ./configure --prefix=#{prefix}"
+    system "CFLAGS=-'Wreturn-type -Wno-implicit-function-declaration' ./configure --enable-header_stdc --prefix=#{prefix}"
     inreplace "Makefile" do |s|
       s.gsub! "-o root -g wheel", ""
     end
