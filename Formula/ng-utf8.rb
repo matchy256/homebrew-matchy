@@ -34,11 +34,11 @@ class NgUtf8 < Formula
     mkdir_p "#{prefix}/share"
     system "make install"
     homerc = %Q(#{Etc.getpwuid.dir}/.ng)
-    dstdir = %Q(/etc/skel)
-    dstrc = %Q(#{dstdir}/.ng)
+    dstdir = %Q(#{prefix}/etc/skel)
+    dstrc = %Q(#{dstdir}/dot.ng)
     tmprc  = %Q(#{ENV['HOMEBREW_LIBRARY']}/Taps/matchy256/homebrew-matchy/Resources/ng-utf8/dot.ng)
     unless (File.exists?(homerc)) then
-      Dir.mkdir dstdir if Dir.exists?(dstdir)
+      Dir.mkdir dstdir if !Dir.exists?(dstdir)
       cp tmprc, dstrc
     end
   end
